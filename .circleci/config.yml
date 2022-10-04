@@ -21,4 +21,4 @@ workflows:
     jobs:
       - print-hello
       - print-world
-        - requires: print-hello
+        - requires: [print-hello]
