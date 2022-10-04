@@ -20,6 +20,6 @@ workflows:
   print-helloworld:
     jobs:
       - print-hello
-      - print-world
-        - requires:
-          - print-hello
+      - print-world:
+          - requires:
+              - print-hello
