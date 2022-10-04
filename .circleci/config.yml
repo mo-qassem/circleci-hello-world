@@ -20,7 +20,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo
-      - run: echo -x ${my_name}
+      - run: echo $my_name
 
 workflows:
   print-helloworld:
