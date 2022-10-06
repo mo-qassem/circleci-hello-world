@@ -17,12 +17,9 @@ jobs:
           at: ~/
       - run: cat ~/output.txt
 workflows:
-  print-helloworld:
+  hello_world_output:
     jobs:
-      - print-hello
-      - print-world:
+      - save_hello_world_output
+      - print_output_file:
           requires:
-            - print-hello
-      - print-myname:
-          requires:
-            - print-world
+            - save_hello_world_output
