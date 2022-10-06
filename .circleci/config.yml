@@ -7,7 +7,7 @@ jobs:
       - run: echo "Hello world" > ~/output.txt
       - persist_to_workspace:
           root: ~/
-          path:
+          paths:
             - output.txt
 
   print_output_file:
@@ -19,7 +19,7 @@ jobs:
       - run: cat ~/output.txt
 
 workflows:
-  helloworld:
+  helloworldworkflow:
     jobs:
       - save_hello_world_output
       - print_output_file:
